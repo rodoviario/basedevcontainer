@@ -1,6 +1,6 @@
 # Base Dev Container
 
-Base Alpine development container for Visual Studio Code, used as base image by other images
+Base Ubuntu development container for Visual Studio Code, used as base image by other images
 
 <img height="300" src="https://raw.githubusercontent.com/kbuley/basedevcontainer/master/title.svg">
 
@@ -46,7 +46,7 @@ Base Alpine development container for Visual Studio Code, used as base image by 
   - `neovim`: vim, but even better
 - Contains the binaries:
   - [`gh`](https://github.com/cli/cli): interact with Github with the terminal
-  - [`bit`](https://github.com/chriswalz/bit): a modern git client
+  <!-- - [`bit`](https://github.com/chriswalz/bit): a modern git client -->
 - Custom integrated terminal
   - Based on zsh and [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
   - Uses the [Powerlevel10k](https://github.com/romkatv/powerlevel10k) theme
@@ -73,8 +73,8 @@ Base Alpine development container for Visual Studio Code, used as base image by 
    # we assume you are in /yourpath/myproject
    mkdir .devcontainer
    cd .devcontainer
-   wget -q https://raw.githubusercontent.com/kbuley/basedevcontainer/master/.devcontainer/devcontainer.json
-   wget -q https://raw.githubusercontent.com/kbuley/basedevcontainer/master/.devcontainer/docker-compose.yml
+   wget -q https://raw.githubusercontent.com/rodoviario/basedevcontainer/master/.devcontainer/devcontainer.json
+   wget -q https://raw.githubusercontent.com/rodoviario/basedevcontainer/master/.devcontainer/docker-compose.yml
    ```
 
 1. If you have a _.vscode/settings.json_, eventually move the settings to _.devcontainer/devcontainer.json_ in the `"settings"` section as _.vscode/settings.json_ take precedence over the settings defined in _.devcontainer/devcontainer.json_.
@@ -113,18 +113,18 @@ You can build and extend the Docker development image to suit your needs.
 - You can build the development image yourself:
 
   ```sh
-  docker build -t kbuley/basedevcontainer -f alpine.Dockerfile  https://github.com/kbuley/basedevcontainer.git
+  docker build -t rodoviario/bdev-u22 -f ubuntu.Dockerfile  https://github.com/rodoviario/basedevcontainer.git
   ```
 
-- You can extend the Docker image `kbuley/basedevcontainer` with your own instructions.
+- You can extend the Docker image `rodoviario/basedevcontainer` with your own instructions.
 
-  1. Create a file `.devcontainer/Dockerfile` with `FROM kbuley/basedevcontainer`
+  1. Create a file `.devcontainer/Dockerfile` with `FROM rodoviario/basedevcontainer`
   1. Append instructions to the Dockerfile created. For example:
 
      - Add more Go packages and add an alias
 
        ```Dockerfile
-       FROM kbuley/basedevcontainer
+       FROM rodoviario/basedevcontainer
        COPY . .
        RUN echo "alias ls='ls -al'" >> ~/.zshrc
        ```
@@ -132,7 +132,7 @@ You can build and extend the Docker development image to suit your needs.
      - Add some Alpine packages, you will need to switch to `root`:
 
        ```Dockerfile
-       FROM kbuley/basedevcontainer
+       FROM rodoviario/basedevcontainer
        USER root
        RUN apk add bind-tools
        USER vscode

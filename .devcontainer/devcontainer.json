@@ -10,19 +10,19 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "IBM.output-colorizer",
+        // "IBM.output-colorizer",
         "eamodio.gitlens",
-        "mhutchie.git-graph",
-        "davidanson.vscode-markdownlint",
-        "shardulm94.trailing-spaces",
-        "alefragnani.Bookmarks",
-        "Gruntfuggly.todo-tree",
-        "mohsen1.prettify-json",
-        "quicktype.quicktype",
-        "spikespaz.vscode-smoothtype",
-        "stkb.rewrap",
-        "vscode-icons-team.vscode-icons",
-        "ms-azuretools.vscode-docker"
+        "mhutchie.git-graph"
+        // "davidanson.vscode-markdownlint",
+        // "shardulm94.trailing-spaces",
+        // "alefragnani.Bookmarks",
+        // "Gruntfuggly.todo-tree",
+        // "mohsen1.prettify-json",
+        // "quicktype.quicktype",
+        // "spikespaz.vscode-smoothtype",
+        // "stkb.rewrap",
+        // "vscode-icons-team.vscode-icons",
+        // "ms-azuretools.vscode-docker"
       ],
       "settings": {
         // General settings
