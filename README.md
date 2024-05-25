@@ -114,13 +114,13 @@ You can build and extend the Docker development image to suit your needs.
 
 - You can extend the Docker image `rodoviario/basedevcontainer` with your own instructions.
 
-  1. Create a file `.devcontainer/Dockerfile` with `FROM rodoviario/basedevcontainer`
+  1. Create a file `.devcontainer/Dockerfile` with `FROM rodoviario/bdev:ubuntu-22-apache2`
   1. Append instructions to the Dockerfile created. For example:
 
      - Add more Go packages and add an alias
 
        ```Dockerfile
-       FROM rodoviario/basedevcontainer
+       FROM rodoviario/bdev:ubuntu-22-apache2
        COPY . .
        RUN echo "alias ls='ls -al'" >> ~/.zshrc
        ```
@@ -128,7 +128,7 @@ You can build and extend the Docker development image to suit your needs.
      - Add some Alpine packages, you will need to switch to `root`:
 
        ```Dockerfile
-       FROM rodoviario/basedevcontainer
+       FROM rodoviario/bdev:ubuntu-22-apache2
        USER root
        RUN apk add bind-tools
        USER vscode

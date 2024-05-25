@@ -1,4 +1,4 @@
-ARG UBUNTU_VERSION=jammy
+ARG UBUNTU_VERSION=2.4-22.04_beta
 
 # ARG LOGOLS_VERSION=v1.3.7
 # ARG BIT_VERSION=v1.1.2
@@ -10,7 +10,7 @@ ARG GH_VERSION=v2.40.1
 FROM kbuley/binpot:gh-${GH_VERSION} AS gh
 # FROM kbuley/binpot:lazygit-${LAZYGIT_VERSION} as lazygit
 
-FROM ubuntu:${UBUNTU_VERSION} as neovim
+FROM ubuntu/apache2:${UBUNTU_VERSION} as neovim
 ARG NEOVIM_VERSION=v0.10.0
 WORKDIR /builder
 # hadolint ignore=DL3008
@@ -22,7 +22,7 @@ RUN make CMAKE_BUILD_TYPE=Release
 WORKDIR /builder/neovim/build
 RUN cpack -G DEB && mkdir /package && cp nvim-linux64.deb /package
 
-FROM ubuntu:${UBUNTU_VERSION}
+FROM ubuntu/apache2:${UBUNTU_VERSION}
 ARG TIMEZONE=America/Argentina/Buenos_Aires
 ARG GITVERSION_VERSION=5.12.0
 ARG TARGETARCH

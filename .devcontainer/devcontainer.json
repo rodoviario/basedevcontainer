@@ -1,5 +1,5 @@
 {
-  "name": "bdev-u22-dev",
+  "name": "bdev-u22-apache2-dev",
   "dockerComposeFile": ["docker-compose.yml"],
   "service": "vscode",
   "runServices": ["vscode"],
