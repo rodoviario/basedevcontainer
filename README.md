@@ -109,10 +109,10 @@ You can build and extend the Docker development image to suit your needs.
 - You can build the development image yourself:
 
   ```sh
-  docker build -t rodoviario/bdev-u22 -f ubuntu.Dockerfile  https://github.com/rodoviario/basedevcontainer.git
+  docker build -t rodoviario/bdev:ubuntu-22-apache2 -f ubuntu.Dockerfile  https://github.com/rodoviario/basedevcontainer.git
   ```
 
-- You can extend the Docker image `rodoviario/basedevcontainer` with your own instructions.
+- You can extend the Docker image `rodoviario/bdev:ubuntu-22-apache2` with your own instructions.
 
   1. Create a file `.devcontainer/Dockerfile` with `FROM rodoviario/bdev:ubuntu-22-apache2`
   1. Append instructions to the Dockerfile created. For example:
