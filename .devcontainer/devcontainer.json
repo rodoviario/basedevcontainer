@@ -11,7 +11,7 @@
     "vscode": {
       "extensions": [
         // "IBM.output-colorizer",
-        "eamodio.gitlens",
+        // "eamodio.gitlens",
         "mhutchie.git-graph"
         // "davidanson.vscode-markdownlint",
         // "shardulm94.trailing-spaces",

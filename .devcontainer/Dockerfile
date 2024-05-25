@@ -1,3 +1,3 @@
 FROM rodoviario/bdev:ubuntu-22
-# FROM kbuley/basedevcontainer:alpine
-# FROM kbuley/basedevcontainer:debian
+# FROM rodoviario/bdev:alpine
+# FROM rodoviario/bdev:debian
