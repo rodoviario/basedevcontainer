@@ -1,5 +1,5 @@
 {
-  "name": "project-dev",
+  "name": "bdev-u22-dev",
   "dockerComposeFile": ["docker-compose.yml"],
   "service": "vscode",
   "runServices": ["vscode"],

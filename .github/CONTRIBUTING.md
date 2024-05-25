@@ -9,7 +9,7 @@ Contributions are [released](https://help.github.com/articles/github-terms-of-se
 3. Modify the code
 4. Ensure the docker build succeeds `docker build .`
 5. Commit your modifications
-6. Push to your fork and [submit a pull request](https://github.com/kbuley/basedevcontainer/compare)
+6. Push to your fork and [submit a pull request](https://github.com/rodoviario/basedevcontainer/compare)
 
 ## Resources
 
